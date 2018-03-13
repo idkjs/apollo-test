@@ -51,6 +51,7 @@ let inMemoryCache =
     ~dataIdFromObject=
       (obj: dataObject) =>
         if (obj##__typename === "Organization") {
+          /* if (obj##__typename === "Person") { */
           obj##key;
         } else {
           obj##id;
